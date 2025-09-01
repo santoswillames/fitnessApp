@@ -1,51 +1,51 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { useOnboardingNavigation } from "../../hooks/useTypedNavigation";
+import { VStack } from "components/ui/vstack";
+import { IndicatorStep } from "./components/indicatorStep";
+import { Text } from "react-native";
+import UnitSwitch from "screens/auth/components";
+import { Box } from "components/ui/box";
+import { GobackButton } from "./components/goBackButton";
+import { Button, ButtonIcon, ButtonText } from "components/ui/button";
+import { ChevronRight } from "lucide-react-native";
 
 export function OnboardingStep2Screen() {
   const navigation = useOnboardingNavigation();
 
-  const handleFinish = async () => {
+  const handleNextStep = async () => {
     navigation.navigate("OnboardingStep3");
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>OnBoarding STEP 2</Text>
+    <VStack className="flex-1 bg-[#FDFDFD] items-center justify-between pt-10 pb-12 px-5">
+      <Box className="flex-1 items-center">
+        <IndicatorStep />
+        <Text className=" font-montserrat-semibold text-2xl text-[#262135] mt-[38px]">What is your</Text>
+        <Text className=" font-montserrat-semibold text-2xl text-[#262135] mb-10">height?</Text>
 
-      <TouchableOpacity style={styles.button} onPress={handleFinish}>
-        <Text style={styles.buttonText}>Next</Text>
-      </TouchableOpacity>
-    </View>
+        <UnitSwitch
+          options={["inches", "cm"]}
+          initial="cm"
+          onChange={(value) => console.log("Selecionado:", value)}
+        />
+
+        <Box className="bg-[#D6EBEB] w-[351px] h-[282px] rounded-[44px] mt-10">
+
+        </Box>
+      </Box>
+
+      <Box className="justify-between items-center flex-row w-full">
+        <GobackButton />
+        <Button variant="solid" className="w-[248px] h-[78px] bg-[#262135] rounded-3xl" onPress={handleNextStep}>
+          <ButtonText className="font-montserrat-semibold text-2xl text-white mr-[35px]">Next</ButtonText>
+          <Box className="flex-row gap-1">
+            <ButtonIcon as={ChevronRight} color="#FFFFFF40" size={24} />
+            <ButtonIcon as={ChevronRight} color="#FFFFFF80" size={24} />
+            <ButtonIcon as={ChevronRight} color="white" size={24} />
+          </Box>
+        </Button>
+      </Box>
+    </VStack>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    paddingHorizontal: 20,
-    backgroundColor: "#fff",
-  },
-  title: {
-    fontSize: 28,
-    fontWeight: "bold",
-    textAlign: "center",
-    marginBottom: 20,
-  },
-
-  button: {
-    backgroundColor: "#007AFF",
-    paddingHorizontal: 40,
-    paddingVertical: 15,
-    borderRadius: 8,
-  },
-  buttonText: {
-    color: "#fff",
-    fontSize: 18,
-    fontWeight: "bold",
-  },
-});
-
-export default OnboardingStep2Screen;

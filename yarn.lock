@@ -7003,10 +7003,10 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
-lucide-react-native@^0.542.0:
-  version "0.542.0"
-  resolved "https://registry.npmjs.org/lucide-react-native/-/lucide-react-native-0.542.0.tgz"
-  integrity sha512-9iI59TPMm7oqdq4/k5zd9DL5bl6s0a772KvpoafzTKEBZTMdu0rd7wg0mSMrCvMDD7SuCiKXk0tg55FyJH8i7Q==
+lucide-react-native@^0.510.0:
+  version "0.510.0"
+  resolved "https://registry.npmjs.org/lucide-react-native/-/lucide-react-native-0.510.0.tgz"
+  integrity sha512-Ggy6NyWNcb/Wp9I0Kguwab5FRjr3GYsxNi0Nmy+skur1yj9TKiF2vcXPL7zWkkcgqk8WWKiIvmN3CntWvaDR1w==
 
 make-dir@^2.0.0:
   version "2.1.0"

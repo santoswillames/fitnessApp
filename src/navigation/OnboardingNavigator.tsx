@@ -2,9 +2,9 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { OnboardingStackParamList } from "./types";
 import { OnboardingStartScreen } from "../screens/onboarding/onBoardingStartScreen";
-import OnboardingStep1Screen from "../screens/onboarding/onBoardingStep1Screen";
-import OnboardingStep2Screen from "../screens/onboarding/onBoardingStep2Screen";
-import OnboardingStep3Screen from "../screens/onboarding/onBoardingStep3Screen";
+import { OnboardingStep1Screen } from "../screens/onboarding/onBoardingStep1Screen";
+import { OnboardingStep2Screen } from "../screens/onboarding/onBoardingStep2Screen";
+import { OnboardingStep3Screen } from "../screens/onboarding/onBoardingStep3Screen";
 
 const OnboardingStack = createNativeStackNavigator<OnboardingStackParamList>();
 

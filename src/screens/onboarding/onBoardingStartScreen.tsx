@@ -1,11 +1,12 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { Text, Image } from "react-native";
 import { useOnboardingNavigation } from "../../hooks/useTypedNavigation";
 import { Button, ButtonText } from "components/ui/button";
 import ArrowWelcomeIcon from '../../assets/svgs/arrow-welcome.svg'
 import ChartIcon from '../../assets/svgs/chart.svg'
 import { Box } from "components/ui/box";
 import { Moon } from "lucide-react-native";
+import { VStack } from "components/ui/vstack";
 
 export function OnboardingStartScreen() {
   const navigation = useOnboardingNavigation();
@@ -15,9 +16,9 @@ export function OnboardingStartScreen() {
   };
 
   return (
-    <View className="flex-1 bg-[#262135] relative">
+    <VStack className="flex-1 bg-[#262135] relative">
       
-      <View className="w-[289px] mt-[50px] ml-[40px]">
+      <Box className="w-[289px] mt-[50px] ml-[40px]">
         <Text className="text-white text-[33px] font-montserrat-bold">
           Start your Fitness Journey
         </Text>
@@ -27,7 +28,7 @@ export function OnboardingStartScreen() {
         <Text className="text-white font-montserrat-regular text-sm">
            with our app's guidance and support.
         </Text>
-      </View>
+      </Box>
 
       <Box className="absolute left-[29px] top-[271px]">
         <ArrowWelcomeIcon  />
@@ -63,7 +64,7 @@ export function OnboardingStartScreen() {
           <ButtonText className="text-black font-semibold">Let's start</ButtonText>
         </Button>
       </Box>
-    </View>
+    </VStack>
   );
 }
 
