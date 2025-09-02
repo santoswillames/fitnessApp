@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import { useOnboardingNavigation } from "../../hooks/useTypedNavigation";
 import { VStack } from "components/ui/vstack";
 import { IndicatorStep } from "./components/indicatorStep";
@@ -13,6 +13,8 @@ import { useFocusEffect } from "@react-navigation/native";
 
 export function OnboardingStep1Screen() {
   const navigation = useOnboardingNavigation();
+  const [selectUnit, setSelectUnit] = useState("kg");
+  const [weight, setWeight] = useState(50);
 
   const { setConfig } = useStatusBar();
 
@@ -44,12 +46,14 @@ export function OnboardingStep1Screen() {
 
         <UnitSwitch
           options={["lb", "kg"]}
-          initial="kg"
-          onChange={(value) => console.log("Selecionado:", value)}
+          initial={selectUnit}
+          onChange={(value) => setSelectUnit(value)}
         />
 
-        <Box className="bg-[#F6F3BA] w-[351px] h-[282px] rounded-[44px] mt-10">
-
+        <Box className="bg-[#F6F3BA] w-[351px] h-[282px] rounded-[44px] mt-10 items-center justify-center">
+          <Text className="font-montserrat-medium text-[#262135] text-[81px]">{weight}</Text>
+          
+          <Text className="font-montserrat-medium text-[#262135] text-sm">{selectUnit}</Text>
         </Box>
       </Box>
 
