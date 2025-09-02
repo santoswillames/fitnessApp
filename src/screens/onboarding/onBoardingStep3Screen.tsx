@@ -10,12 +10,13 @@ import { GobackButton } from "./components/goBackButton";
 import { Button, ButtonText } from "components/ui/button";
 import { Checkbox, CheckboxGroup, CheckboxIcon, CheckboxIndicator, CheckboxLabel } from "components/ui/checkbox";
 import { CheckIcon } from "components/ui/icon";
+import { CustomCheckboxGroup, CustomCheckboxItem } from "./components/customCheckbox";
 
 export function OnboardingStep3Screen() {
   const navigation =
     useNavigation<NativeStackNavigationProp<RootStackParamList>>();
   
-  const [values, setValues] = useState(["Eng"])
+  const [values, setValues] = useState(["strength"])
 
   const handleFinish = () => {
     navigation.reset({
@@ -26,34 +27,33 @@ export function OnboardingStep3Screen() {
 
   return (
     <VStack className="flex-1 bg-[#FDFDFD] items-center justify-between pt-10 pb-12 px-5">
-      <Box className="flex-1 items-center">
+      <Box className="flex-1 items-center w-full">
         <IndicatorStep />
         <Text className="font-montserrat-semibold text-2xl text-[#262135] mt-[38px]">What is your</Text>
         <Text className="font-montserrat-semibold text-2xl text-[#262135] mb-[15px]">acheive?</Text>
         <Text className="font-montserrat-semibold text-[15px] text-[#9B9B9B] text-center w-[289px] mb-[38px]">What you are going to select will effect your workout program</Text>
 
-       <CheckboxGroup 
-        value={values}
-        onChange={(keys: string[]) => {
-          setValues(keys);
-        }}
-       >
-        <VStack space="xl">
-          <Checkbox value="Eng">
-            <CheckboxIndicator>
-              <CheckboxIcon as={CheckIcon} />
-            </CheckboxIndicator>
-            <CheckboxLabel>Framer</CheckboxLabel>
-          </Checkbox>
-          <Checkbox value="invison">
-            <CheckboxIndicator>
-              <CheckboxIcon as={CheckIcon} />
-            </CheckboxIndicator>
-            <CheckboxLabel>Invision Studio</CheckboxLabel>
-          </Checkbox>
-        </VStack>
-
-       </CheckboxGroup>
+       <CustomCheckboxGroup
+          value={values}
+          onChange={(keys) => setValues(keys)}
+        >
+          <CustomCheckboxItem
+            value="strength"
+            label="Strength Training for Muscle Gain"
+          />
+          <CustomCheckboxItem
+            value="hiit"
+            label="High-Intensity Interval Training for Fat Loss"
+          />
+          <CustomCheckboxItem
+            value="cardio"
+            label="Cardiovascular Exercise for Fat Loss"
+          />
+          <CustomCheckboxItem
+            value="functional"
+            label="Functional Training for Overall Fitness"
+          />
+        </CustomCheckboxGroup>
       </Box>
 
       <Box className="justify-between items-center flex-row w-full">
