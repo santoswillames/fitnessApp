@@ -13,7 +13,7 @@ const RootStack = createNativeStackNavigator<RootStackParamList>();
 
 export function RootNavigator() {
   const isAuthenticated = true;
-  const hasCompletedOnboarding = false;
+  const hasCompletedOnboarding = true;
 
   const initialRoute = !isAuthenticated
     ? "Auth"
