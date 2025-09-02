@@ -5,12 +5,13 @@ import { HStack } from "components/ui/hstack";
 import { VStack } from "components/ui/vstack";
 import { Search } from "lucide-react-native";
 import React from "react";
-import { Text, View } from "react-native";
+import { Text } from "react-native";
+import { ChartHome } from "./components/chartHome";
 
 export function HomeScreen() {
   return (
     <VStack className="flex-1 bg-[#262135] px-8">
-      <HStack className="mt-[41px] items-center justify-between mb-8">
+      <HStack className="mt-[41px] items-center justify-between mb-9">
         <Box >
           <Text className="font-montserrat-semibold text-white text-4xl">Hi!,</Text>
           <Text className="font-montserrat-semibold text-white text-4xl">Youssef</Text>
@@ -27,6 +28,7 @@ export function HomeScreen() {
           </Avatar>
         </Box>
       </HStack>
+      <ChartHome />
     </VStack>
   );
 }
