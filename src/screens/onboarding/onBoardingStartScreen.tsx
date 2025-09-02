@@ -7,6 +7,7 @@ import ChartIcon from '../../assets/svgs/chart.svg'
 import { Box } from "components/ui/box";
 import { Moon } from "lucide-react-native";
 import { VStack } from "components/ui/vstack";
+import { SlideButton } from "./components/slideButton";
 
 export function OnboardingStartScreen() {
   const navigation = useOnboardingNavigation();
@@ -60,9 +61,7 @@ export function OnboardingStartScreen() {
 
    
       <Box className="absolute bottom-10 left-6 right-6">
-        <Button className="rounded-full bg-white" onPress={handleFinish}>
-          <ButtonText className="text-black font-semibold">Let's start</ButtonText>
-        </Button>
+        <SlideButton />
       </Box>
     </VStack>
   );

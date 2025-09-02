@@ -2,7 +2,6 @@ import React from "react";
 import "../global.css"
 
 import { RootNavigator } from "./navigation/RootNavigator";
-import { StatusBar } from "react-native";
 import { GluestackUIProvider } from "./components/ui/gluestack-ui-provider";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBarProvider } from "contexts/StatusBarContext";
