@@ -43,7 +43,7 @@ export default function UnitSwitch({
           transform: [
             {
               translateX: translateX.interpolate({
-                inputRange: [0, 1],
+                inputRange: [-0.02, 1],
                 outputRange: [0, 105], // metade da largura do switch (ajusta se mudar o tamanho)
               }),
             },

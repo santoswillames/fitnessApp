@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useNavigation } from "@react-navigation/native";
+import React, { useCallback, useState } from "react";
+import { useFocusEffect, useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../navigation/types";
 import { VStack } from "components/ui/vstack";
@@ -11,12 +11,30 @@ import { Button, ButtonText } from "components/ui/button";
 import { Checkbox, CheckboxGroup, CheckboxIcon, CheckboxIndicator, CheckboxLabel } from "components/ui/checkbox";
 import { CheckIcon } from "components/ui/icon";
 import { CustomCheckboxGroup, CustomCheckboxItem } from "./components/customCheckbox";
+import { useStatusBar } from "contexts/StatusBarContext";
 
 export function OnboardingStep3Screen() {
   const navigation =
     useNavigation<NativeStackNavigationProp<RootStackParamList>>();
   
   const [values, setValues] = useState(["strength"])
+
+  const { setConfig } = useStatusBar();
+  
+  useFocusEffect(
+    useCallback(() => {
+      setConfig({
+        backgroundColor: "#FDFDFD",
+        barStyle: "dark-content",
+      });
+
+      return () =>
+        setConfig({
+          backgroundColor: "transparent",
+          barStyle: "default",
+        });
+    }, [])
+  );
 
   const handleFinish = () => {
     navigation.reset({

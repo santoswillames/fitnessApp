@@ -1,16 +1,35 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useOnboardingNavigation } from "../../hooks/useTypedNavigation";
 import { VStack } from "components/ui/vstack";
 import { IndicatorStep } from "./components/indicatorStep";
 import { Text } from "react-native";
-import UnitSwitch from "screens/auth/components";
+import UnitSwitch from "screens/onboarding/components/unitSwitch";
 import { Box } from "components/ui/box";
 import { GobackButton } from "./components/goBackButton";
 import { Button, ButtonIcon, ButtonText } from "components/ui/button";
 import { ChevronRight } from "lucide-react-native";
+import { useStatusBar } from "contexts/StatusBarContext";
+import { useFocusEffect } from "@react-navigation/native";
 
 export function OnboardingStep1Screen() {
   const navigation = useOnboardingNavigation();
+
+  const { setConfig } = useStatusBar();
+
+  useFocusEffect(
+    useCallback(() => {
+      setConfig({
+        backgroundColor: "#FDFDFD",
+        barStyle: "dark-content",
+      });
+
+      return () =>
+        setConfig({
+          backgroundColor: "transparent",
+          barStyle: "default",
+        });
+    }, [])
+  );
 
   const handleNextStep = async () => {
     navigation.navigate("OnboardingStep2");
