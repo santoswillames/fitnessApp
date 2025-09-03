@@ -8,8 +8,6 @@ import { Text } from "react-native";
 import { Box } from "components/ui/box";
 import { GobackButton } from "./components/goBackButton";
 import { Button, ButtonText } from "components/ui/button";
-import { Checkbox, CheckboxGroup, CheckboxIcon, CheckboxIndicator, CheckboxLabel } from "components/ui/checkbox";
-import { CheckIcon } from "components/ui/icon";
 import { CustomCheckboxGroup, CustomCheckboxItem } from "./components/customCheckbox";
 import { useStatusBar } from "contexts/StatusBarContext";
 

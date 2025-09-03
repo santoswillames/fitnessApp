@@ -8,8 +8,18 @@ import React from "react";
 import { Text } from "react-native";
 import { ChartHome } from "./components/chartHome";
 import { TimelineSchedule } from "./components/timelineSchedule";
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { RootStackParamList } from "navigation/types";
 
 export function HomeScreen() {
+  const navigation =
+      useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+
+  const handleActivityStart = (activityId: string) => {
+    navigation.push("Workout", { activityId });
+  };
+      
   return (
     <VStack className="flex-1 bg-[#262135] px-8">
       <HStack className="mt-[41px] items-center justify-between mb-12">
@@ -40,7 +50,7 @@ export function HomeScreen() {
         </Button>
       </Box>
       <Text className="mt-4 mb-4 font-montserrat-regular text-white text-sm">Today’s Activity</Text>
-      <TimelineSchedule />
+      <TimelineSchedule handleStartActivity={handleActivityStart} />
     </VStack>
   );
 }

@@ -7,6 +7,10 @@ import { Pressable } from "components/ui/pressable";
 import { HStack } from "components/ui/hstack";
 import { Play } from "lucide-react-native";
 
+interface TimelineScheduleProps {
+    handleStartActivity: (activityId: string) => void
+}
+
 interface Activity {
   id: string;
   title: string;
@@ -19,7 +23,7 @@ const activities: Activity[] = [
   { id: "3", title: "Push Up", description: "20 reps , 3 sets with 10 sec rest" },
 ];
 
-export function TimelineSchedule() {
+export function TimelineSchedule({ handleStartActivity }: TimelineScheduleProps) {
   const [selectedId, setSelectedId] = useState<string>("1");
 
   // Configura para considerar o item que aparece +50% na tela como "selecionado"
@@ -66,7 +70,7 @@ export function TimelineSchedule() {
             </VStack>
 
             {isSelected && (
-            <Button className="rounded-full bg-[#F5F2B8] w-[106px] h-[55px]">
+            <Button className="rounded-full bg-[#F5F2B8] w-[106px] h-[55px]" onPress={() => handleStartActivity(item.id)}>
                 <ButtonText className="font-montserrat-bold text-base text-[#262135]">Start</ButtonText>
                 <ButtonIcon as={Play} size={14} color="#262135" fill="#262135"/>
             </Button>

@@ -3,7 +3,7 @@ export type RootStackParamList = {
   Auth: undefined;
   Main: undefined;
   Map: undefined;
-  Workout: undefined;
+  Workout: { activityId: string };
   Success: undefined;
 };
 
