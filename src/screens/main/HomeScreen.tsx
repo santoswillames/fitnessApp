@@ -3,15 +3,16 @@ import { Box } from "components/ui/box";
 import { Button, ButtonIcon } from "components/ui/button";
 import { HStack } from "components/ui/hstack";
 import { VStack } from "components/ui/vstack";
-import { Search } from "lucide-react-native";
+import { ListFilter, Search } from "lucide-react-native";
 import React from "react";
 import { Text } from "react-native";
 import { ChartHome } from "./components/chartHome";
+import { TimelineSchedule } from "./components/timelineSchedule";
 
 export function HomeScreen() {
   return (
     <VStack className="flex-1 bg-[#262135] px-8">
-      <HStack className="mt-[41px] items-center justify-between mb-9">
+      <HStack className="mt-[41px] items-center justify-between mb-12">
         <Box >
           <Text className="font-montserrat-semibold text-white text-4xl">Hi!,</Text>
           <Text className="font-montserrat-semibold text-white text-4xl">Youssef</Text>
@@ -29,6 +30,17 @@ export function HomeScreen() {
         </Box>
       </HStack>
       <ChartHome />
+      <Box className="mt-10 flex-row items-center justify-between h-20">
+        <Box>
+          <Text className="font-montserrat-semibold text-white text-3xl">Your</Text>
+          <Text className="font-montserrat-semibold text-white text-3xl">Schedule</Text>
+        </Box>
+        <Button className="bg-[#D6EBEB] rounded-2xl w-14 h-12">
+          <ButtonIcon as={ListFilter} color="#262135" size={24}/>
+        </Button>
+      </Box>
+      <Text className="mt-4 mb-4 font-montserrat-regular text-white text-sm">Today’s Activity</Text>
+      <TimelineSchedule />
     </VStack>
   );
 }
