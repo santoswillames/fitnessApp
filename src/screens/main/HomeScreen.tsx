@@ -21,8 +21,8 @@ export function HomeScreen() {
   };
       
   return (
-    <VStack className="flex-1 bg-[#262135] px-8">
-      <HStack className="mt-[41px] items-center justify-between mb-12">
+    <VStack className="flex-1 bg-[#262135] px-8 pt-[41px]">
+      <HStack className="items-center justify-between mb-12">
         <Box >
           <Text className="font-montserrat-semibold text-white text-4xl">Hi!,</Text>
           <Text className="font-montserrat-semibold text-white text-4xl">Youssef</Text>

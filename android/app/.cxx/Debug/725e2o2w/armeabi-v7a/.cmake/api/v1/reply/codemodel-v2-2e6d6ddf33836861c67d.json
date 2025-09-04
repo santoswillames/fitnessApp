@@ -150,49 +150,49 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "appmodules::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-appmodules-Debug-e307d0e3fa3e47c491a6.json",
+					"jsonFile" : "target-appmodules-Debug-c33c0d69e3fc7a77e0f4.json",
 					"name" : "appmodules",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "react_codegen_RNBootSplashSpec::@05d5bd8b08339ce1ebaa",
-					"jsonFile" : "target-react_codegen_RNBootSplashSpec-Debug-cae3695e740f2090a62c.json",
+					"jsonFile" : "target-react_codegen_RNBootSplashSpec-Debug-1ae55e19f4232458d5d0.json",
 					"name" : "react_codegen_RNBootSplashSpec",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "react_codegen_rngesturehandler_codegen::@39f233abcd2c728bc6ec",
-					"jsonFile" : "target-react_codegen_rngesturehandler_codegen-Debug-712cd12e81212a8610f3.json",
+					"jsonFile" : "target-react_codegen_rngesturehandler_codegen-Debug-564204f5b3b17084ad0d.json",
 					"name" : "react_codegen_rngesturehandler_codegen",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "react_codegen_rnreanimated::@8afabad14bfffa3f8b9a",
-					"jsonFile" : "target-react_codegen_rnreanimated-Debug-83c4f82fae7b01ff955c.json",
+					"jsonFile" : "target-react_codegen_rnreanimated-Debug-ca046c914aa29c2e38a2.json",
 					"name" : "react_codegen_rnreanimated",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "react_codegen_rnscreens::@25bcbd507e98d3a854ad",
-					"jsonFile" : "target-react_codegen_rnscreens-Debug-6015509ad969cf4753d6.json",
+					"jsonFile" : "target-react_codegen_rnscreens-Debug-b9ba94f6fd85f3739527.json",
 					"name" : "react_codegen_rnscreens",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 6,
 					"id" : "react_codegen_rnsvg::@4f40eb209d0c0b4a3b65",
-					"jsonFile" : "target-react_codegen_rnsvg-Debug-7da11a5ba6829aa873e0.json",
+					"jsonFile" : "target-react_codegen_rnsvg-Debug-7c6ac015c674c4a5ac65.json",
 					"name" : "react_codegen_rnsvg",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 4,
 					"id" : "react_codegen_safeareacontext::@7984cd80db47aa7b952a",
-					"jsonFile" : "target-react_codegen_safeareacontext-Debug-5bb9365558b5e89e4836.json",
+					"jsonFile" : "target-react_codegen_safeareacontext-Debug-d6e9a97be17aa54a2aa3.json",
 					"name" : "react_codegen_safeareacontext",
 					"projectIndex" : 0
 				}
@@ -202,7 +202,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/fitnessApp/android/app/.cxx/Debug/725e2o2w/x86_64",
+		"build" : "C:/fitnessApp/android/app/.cxx/Debug/725e2o2w/armeabi-v7a",
 		"source" : "C:/fitnessApp/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup"
 	},
 	"version" : 
